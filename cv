@@ -1,0 +1,779 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CV | Strona główna</title>
+  <link rel="stylesheet" href="css-style.css" />
+  <style>
+    .hero__title { letter-spacing: 0.5px; }
+    .badge[data-level="pro"] { border-style: dashed; }
+  </style>
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container header__grid">
+      <a class="brand" href="index.html" aria-label="Powrót na stronę główną">
+        <span class="brand__mark">CV</span>
+        <span class="brand__name">Patryk Litwin</span>
+      </a>
+      <nav class="nav" aria-label="Nawigacja główna">
+        <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navList">
+          ☰ Menu
+        </button>
+        <ul class="nav__list" id="navList">
+          <li><a class="nav__link is-active" href="index.html">Start</a></li>
+          <li><a class="nav__link" href="about.html">O mnie</a></li>
+          <li><a class="nav__link" href="projects.html">Projekty</a></li>
+          <li><a class="nav__link" href="#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <section class="hero">
+      <div class="hero__content">
+        <p class="eyebrow">CV / Portfolio</p>
+        <h1 class="hero__title">Cześć! Jestem <span class="accent">Patryk Litwin</span> 👋</h1>
+        <p class="hero__lead">
+          Mam 23 lata i akutalnie jestem studentem Uczelni Techniczno Handlowej (UTH) w Warszawie na kierunku
+          <strong>Cyberbezpieczeństwo – informatyka</strong> (1. rok).
+          Po 10 latach wróciłem do Polski z Holandii oraz zacząłem dalszą edukację w kraju. Pomimo niedużego doświadczenia zawodowego w otoczeniu IT wiąże z tym swoją przyszłość i pragne rozwijać się w tym kierunku. Moim celem jest zdobywać coraz to większą wiedze oraz każdego dnia być lepszym i mądrzejszym niż wczoraj.
+        </p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="projects.html">Zobacz projekty</a>
+          <button class="btn btn--ghost" id="toggleThemeBtn" type="button" title="Zmień motyw">
+            Zmień kolorystykę
+          </button>
+        </div>
+        <p style="margin-top:12px; font-size: 0.95rem;">
+          Aktualnie: <span class="badge" data-level="pro">Szukam pierwszej pracy</span>
+        </p>
+      </div>
+      <aside class="hero__media" aria-label="Galeria zdjęć">
+        <div class="slideshow" id="slideshow">
+          <img class="slideshow__img is-visible" src="img-photo1.jpg" alt="Zdjęcie 1 - miejsce na zdjęcie" />
+          <img class="slideshow__img" src="img-photo2.jpg" alt="Zdjęcie 2 - miejsce na zdjęcie" />
+          <img class="slideshow__img" src="img-photo3.png" alt="Zdjęcie 3 - miejsce na zdjęcie" />
+          <div class="slideshow__controls"></div>
+        </div>
+      </aside>
+    </section>
+    <section class="grid-3" aria-label="Szybki przegląd">
+      <article class="card">
+        <h2 class="card__title">Umiejętności / języki programowania</h2>
+        <p>Składanie oraz rozkładanie komputerów jak i laptopów, praca z Windowsem, rozwiązywanie codziennych problemów z elektroniką (Helpdesk). Języki, w których programowałem: C++, HTML, PHP.</p>
+        <ul class="pill-list">
+          <li class="pill">C++</li>
+          <li class="pill">HTML</li>
+          <li class="pill">PHP</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h2 class="card__title">Doświadczenie</h2>
+        <p>Rok praktyk w Polsce jako Administrator IT oraz Programista.</p>
+        <p class="muted">Pragnę rozwijać się dalej w kierunku IT i cyberbezpieczeństwa.</p>
+      </article>
+      <article class="card">
+        <h2 class="card__title">Edukacja</h2>
+        <p><strong>UTH Warszawa</strong> – Cyberbezpieczeństwo-informatyka (1. rok).</p>
+        <p><strong>Techniek College Rotterdam MBO 2(technikum Holenderskie)</strong> - Zarządanie IT (pół roku).</p>
+        <p><strong>Techniek College Rotterdam MBO 3(technikum Holenderskie)</strong> - Administrator IT (pół roku).</p>
+        <p><strong>Techniek College Rotterdam MBO 4(technikum Holenderskie)</strong> - Programista (2 lata).</p>
+      </article>
+    </section>
+    <section class="card card--wide" aria-label="Technologie i poziom">
+      <div class="card__header">
+        <h2 class="card__title">Technologie</h2>
+        <div class="toolbox">
+          <label class="field">
+            <span class="field__label">Szukaj</span>
+            <input id="techSearch" class="field__input" type="search" placeholder="np. HTML, PHP, C++..." />
+          </label>
+          <label class="field">
+            <span class="field__label">Filtr poziomu</span>
+            <select id="levelFilter" class="field__input">
+              <option value="all">Wszystkie</option>
+              <option value="podstawy">Podstawy</option>
+              <option value="sredni">Średni</option>
+              <option value="zaawansowany">Zaawansowany</option>
+            </select>
+          </label>
+          <button class="btn btn--ghost" id="resetFilters" type="button">Reset</button>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table class="table" id="techTable">
+          <thead>
+            <tr>
+              <th scope="col">Technologia</th>
+              <th scope="col">Poziom</th>
+              <th scope="col">Zastosowanie</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-level="sredni">
+              <td>HTML</td>
+              <td>Średni</td>
+              <td>Struktura stron, semantyka</td>
+            </tr>
+            <tr data-level="podstawy">
+              <td>PHP</td>
+              <td>Podstawy</td>
+              <td>Logika po stronie serwera (podstawy)</td>
+            </tr>
+            <tr data-level="podstawy">
+              <td>C++</td>
+              <td>Podstawy</td>
+              <td>Podstawy programowania, algorytmika</td>
+            </tr>
+            <tr data-level="podstawy">
+              <td>JavaScript</td>
+              <td>Podstawy</td>
+              <td>Interakcje na stronie (DOM, eventy)</td>
+            </tr>
+            <tr data-level="podstawy">
+              <td>Bootstrap</td>
+              <td>Podstawy</td>
+              <td>Responsywny grid i komponenty</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section class="card card--wide" id="kontakt" aria-label="Kontakt">
+      <h2 class="card__title">Kontakt</h2>
+      <p>Możesz napisać przez formularz (demo) albo skontaktować się bezpośrednio.</p>
+      <div class="card" style="margin: 12px 0;">
+       <p><strong>Miasto:</strong> Płock</p>
+        <p><strong>Email:</strong> <a href="mailto:patryczek.litwin@gmail.com">patryczek.litwin@gmail.com</a></p>
+        <p><strong>Telefon:</strong> <a href="tel:+48883316827">+48 883 316 827</a></p>
+      </div>
+      <form class="form" id="contactForm" novalidate>
+        <div class="form__row">
+          <label class="field">
+            <span class="field__label">Imię</span>
+            <input class="field__input" id="nameInput" type="text" minlength="2" required placeholder="Jan" />
+          </label>
+          <label class="field">
+            <span class="field__label">Email</span>
+            <input class="field__input" id="emailInput" type="email" required placeholder="jan@email.com" />
+          </label>
+        </div>
+        <label class="field">
+          <span class="field__label">Wiadomość</span>
+          <textarea class="field__input" id="msgInput" rows="4" required placeholder="Cześć, chciałbym..."></textarea>
+        </label>
+        <div class="form__actions">
+          <button class="btn btn--primary" type="submit">Wyślij</button>
+          <button class="btn btn--ghost" type="button" id="fillDemo">Wypełnij przykładem</button>
+        </div>
+        <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <p>© <span id="year"></span> Patryk Litwin</p>
+      <a class="to-top" href="#top">Wróć na górę ↑</a>
+    </div>
+  </footer>
+  <script src="js-app.js"></script>
+</body>
+</html>
+
+const $ = (sel, root = document) => root.querySelector(sel);
+const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
+const yearEl = $("#year");
+if (yearEl) yearEl.textContent = new Date().getFullYear();
+const navToggle = $("#navToggle");
+const navList = $("#navList");
+
+if (navToggle && navList) {
+  navToggle.addEventListener("click", () => {
+    const open = navList.classList.toggle("is-open");
+    navToggle.setAttribute("aria-expanded", String(open));
+  });
+}
+// ===== Zmiana motywu (CSS) =====
+const toggleThemeBtn = $("#toggleThemeBtn");
+if (toggleThemeBtn) {
+  toggleThemeBtn.addEventListener("click", () => {
+    const current = document.documentElement.getAttribute("data-theme");
+    document.documentElement.setAttribute("data-theme", current === "light" ? "" : "light");
+  });
+}
+const slides = $$("#slideshow .slideshow__img");
+let slideIndex = 0;
+function showSlide(i) {
+  if (!slides.length) return;
+  slides.forEach((img) => img.classList.remove("is-visible"));
+  slideIndex = (i + slides.length) % slides.length;
+  const active = slides[slideIndex];
+  active.classList.add("is-visible");
+  //  rozmyte tło dopasowane do aktualnego slajdu
+  const slideshow = document.getElementById("slideshow");
+  if (slideshow) {
+    slideshow.style.setProperty("--slide-bg", `url("${active.getAttribute("src")}")`);
+  }
+}
+const nextBtn = $("#nextSlide");
+const prevBtn = $("#prevSlide");
+if (nextBtn) nextBtn.addEventListener("click", () => showSlide(slideIndex + 1));
+if (prevBtn) prevBtn.addEventListener("click", () => showSlide(slideIndex - 1));
+// auto-play
+if (slides.length) {
+  setInterval(() => showSlide(slideIndex + 1), 6000);
+}
+// search + filter TABLE
+const techSearch = $("#techSearch");
+const levelFilter = $("#levelFilter");
+const resetFilters = $("#resetFilters");
+const techTable = $("#techTable");
+
+function filterTechTable() {
+  if (!techTable) return;
+  const q = (techSearch?.value || "").trim().toLowerCase();
+  const lvl = levelFilter?.value || "all";
+
+  $$("#techTable tbody tr").forEach((row) => {
+    const rowText = row.textContent.toLowerCase();
+    const rowLevel = row.getAttribute("data-level");
+    const matchesSearch = !q || rowText.includes(q);
+    const matchesLevel = lvl === "all" || rowLevel === lvl;
+    row.style.display = matchesSearch && matchesLevel ? "" : "none";
+  });
+}
+
+if (techSearch) techSearch.addEventListener("input", filterTechTable);
+if (levelFilter) levelFilter.addEventListener("change", filterTechTable);
+
+if (resetFilters) {
+  resetFilters.addEventListener("click", () => {
+    if (techSearch) techSearch.value = "";
+    if (levelFilter) levelFilter.value = "all";
+    filterTechTable();
+  });
+}
+
+// Formularz (Buttons + Forms + DOM) 
+const form = $("#contactForm");
+const statusEl = $("#formStatus");
+const fillDemo = $("#fillDemo");
+
+function setStatus(msg, ok = true) {
+  if (!statusEl) return;
+  statusEl.textContent = msg;
+  statusEl.style.color = ok ? "" : "tomato"; // dynamiczna zmiana stylu
+}
+
+if (fillDemo) {
+  fillDemo.addEventListener("click", () => {
+    const name = $("#nameInput");
+    const email = $("#emailInput");
+    const msg = $("#msgInput");
+    if (name) name.value = "Jan";
+    if (email) email.value = "jan@email.com";
+    if (msg) msg.value = "Cześć! To jest przykładowa wiadomość z formularza.";
+    setStatus("Uzupełniono przykładowe dane.");
+  });
+}
+
+if (form) {
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const name = $("#nameInput");
+    const email = $("#emailInput");
+    const msg = $("#msgInput");
+
+    const valid =
+      name?.checkValidity() &&
+      email?.checkValidity() &&
+      msg?.checkValidity();
+
+    if (!valid) {
+      setStatus("Uzupełnij poprawnie wszystkie pola (walidacja HTML).", false);
+      // pokaż natywne komunikaty przeglądarki
+      form.reportValidity();
+      return;
+    }
+
+    setStatus("Wiadomość wysłana (demo). Dzięki! ✅");
+    form.reset();
+  });
+}
+
+const projectFilter = $("#projectFilter");
+const projectList = $("#projectList");
+const shuffleBtn = $("#shuffleBtn");
+
+function filterProjects() {
+  if (!projectFilter || !projectList) return;
+  const val = projectFilter.value;
+
+  $$("#projectList > li").forEach((li) => {
+    const tags = (li.getAttribute("data-tags") || "").split(/\s+/);
+    li.style.display = (val === "all" || tags.includes(val)) ? "" : "none";
+  });
+}
+
+if (projectFilter) projectFilter.addEventListener("change", filterProjects);
+
+// dodatkowa funkcjonalność przyciskiem
+function shuffleList(ul) {
+  const items = [...ul.children];
+  for (let i = items.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [items[i], items[j]] = [items[j], items[i]];
+  }
+  items.forEach((li) => ul.appendChild(li));
+}
+
+if (shuffleBtn && projectList) {
+  shuffleBtn.addEventListener("click", () => {
+    shuffleList(projectList);
+  });
+}
+
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CV | Projekty</title>
+
+  <link rel="stylesheet" href="css-style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header__grid">
+      <a class="brand" href="index.html"><span class="brand__mark">CV</span><span class="brand__name">Patryk Litwin</span></a>
+      <nav class="nav" aria-label="Nawigacja">
+        <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navList">☰ Menu</button>
+        <ul class="nav__list" id="navList">
+          <li><a class="nav__link" href="index.html">Start</a></li>
+          <li><a class="nav__link" href="about.html">O mnie</a></li>
+          <li><a class="nav__link is-active" href="projects.html">Projekty</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container my-4">
+    <div class="row g-3">
+      <div class="col-12 col-lg-8">
+        <div class="card p-3">
+          <h1>Projekty</h1>
+          <div class="d-flex gap-2 flex-wrap align-items-end">
+            <div class="w-100 w-md-auto">
+              <label class="form-label">Filtr tagów</label>
+              <select class="form-select" id="projectFilter">
+                <option value="all">Wszystkie</option>
+                <option value="web">Web</option>
+                <option value="ui">UI</option>
+                <option value="js">JavaScript</option>
+                <option value="admin">Administrator</option>
+              </select>
+            </div>
+            <button class="btn btn-outline-secondary" id="shuffleBtn" type="button">
+              Wymieszaj kolejność (JS)
+            </button>
+          </div>
+          <ul class="list-group mt-3" id="projectList">
+            <li class="list-group-item" data-tags="web ui">
+              <strong>Strona CV</strong> <span class="badge text-bg-primary">Web</span>
+              <div class="text-secondary">Semantyczny HTML + CSS + JS (slideshow, filtry, formularz).</div>
+            </li>
+            <li class="list-group-item" data-tags="admin">
+              <strong>Praktyki: Administrator IT</strong> <span class="badge text-bg-warning">Administrator</span>
+              <div class="text-secondary">Wsparcie IT, konfiguracja, utrzymanie środowiska (opis skrótowy).</div>
+            </li>
+            <li class="list-group-item" data-tags="web js">
+              <strong>Mini interakcje JS</strong> <span class="badge text-bg-success">JS</span>
+              <div class="text-secondary">Obsługa DOM, zdarzeń i dynamicznych zmian na stronie.</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-12 col-lg-4">
+        <div class="card p-3">
+          <h2>Podsumowanie</h2>
+          <table class="table table-sm">
+            <thead>
+              <tr><th>Rok</th><th>Pozycja</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>2026</td><td>Strona CV</td></tr>
+              <tr><td>2023</td><td>Praktyki Administrator IT</td></tr>
+              <tr><td>2023</td><td>Praktyki Programista</td></tr>
+            </tbody>
+          </table>
+          <a class="btn btn-outline-primary w-100" href="index.html">← Wróć na stronę główną</a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <p>© <span id="year"></span> Patryk Litwin</p>
+      <a class="to-top" href="index.html#top">Start ↑</a>
+    </div>
+  </footer>
+  <script src="js-app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CV | O mnie</title>
+  <link rel="stylesheet" href="css-style.css" />
+  <style>
+    .section-title::after { content: " ✦"; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header__grid">
+      <a class="brand" href="index.html"><span class="brand__mark">CV</span><span class="brand__name">Patryk Litwin</span></a>
+      <nav class="nav" aria-label="Nawigacja">
+        <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navList">☰ Menu</button>
+        <ul class="nav__list" id="navList">
+          <li><a class="nav__link" href="index.html">Start</a></li>
+          <li><a class="nav__link is-active" href="about.html">O mnie</a></li>
+          <li><a class="nav__link" href="projects.html">Projekty</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <section class="two-col">
+      <article class="card">
+        <h1 class="section-title">O mnie</h1>
+        <p>
+          Mam na imię Patryk, mam 23 lata. Urodziłem się w Płocku, w wieku 13 lat przeprowadziłem się do Holandii, mieszkałem tam 10 lat, nauczyłem się biegle mówić w języku Holenderskim/Niderlandzkim. Udało mi się skończyć rownież Holenderskie technikum w kierunku IT, aż po 10 latach nadszedł czas na powrót do ojczyzny. Aktualnie jestem studentem Uczelni Techniczno Handlowej (UTH) w Warszawie
+          na kierunku <strong>Cyberbezpieczeństwo – informatyka</strong> (1. rok).
+          Pomimo niedużego doświadczenia zawodowego w IT, wiążę przyszłość z tym kierunkiem.
+        </p>
+        <h2>Języki</h2>
+        <ul class="list">
+          <li>Polski - C2</li>
+          <li>Niderladzki - C1</li>
+          <li>Angielski - B2</li>
+          <li>Serbski - A2</li>
+          <li>Hiszpański - A1</li>
+        </ul>
+        <h2>Doświadczenie zawodowe</h2>
+        <ol class="list list--ordered">
+          <li>Praktykant jako administrator IT oraz programista junior – wsparcie, konfiguracje, utrzymanie, wykonywanie projektów programistycznych w ramach praktyk</li>
+          <li>Rok jako pomoc montera izolacji przemysłowych Shell Pernis Rotterdam</li>
+          <li>Dwa lata jako monter izolacji przemysłowych Shell Pernis Rotterdam</li>
+
+        </ol>
+      </article>
+      <aside class="card">
+        <h2 class="section-title">Edukacja</h2>
+        <table class="table">
+          <thead>
+            <tr><th>Etap</th><th>Opis</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>UTH (Warszawa)</td>
+              <td>Cyberbezpieczeństwo – informatyka, 1. rok</td>
+            </tr>
+            <tr>
+              <td>MBO 4</td>
+              <td>Programista (2 lata)</td>
+            </tr>
+            <tr>
+              <td>MBO 3</td>
+              <td>Administrator IT (Pół roku)</td>
+            </tr>
+            <tr>
+              <td>MBO 2</td>
+              <td>Zarządznie IT (Pół roku)</td>
+            </tr>
+            <tr>
+              <td>MBO 1</td>
+              <td>Młodszy mechanik samochodowy (Rok)</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 class="section-title" style="margin-top:14px;">Kontakt</h2>
+            <p><strong>Miasto:</strong> Płock</p>
+            <p><strong>Email:</strong> <a href="mailto:patryczek.litwin@gmail.com">patryczek.litwin@gmail.com</a></p>
+            <p><strong>Telefon:</strong> <a href="tel:+48883316827">+48 883 316 827</a></p>
+            
+        <a class="btn btn--ghost" href="index.html">← Wróć na stronę główną</a>
+      </aside>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <p>© <span id="year"></span> Patryk Litwin</p>
+      <a class="to-top" href="index.html#top">Start ↑</a>
+    </div>
+  </footer>
+  <script src="js-app.js"></script>
+</body>
+</html>
+
+:root{
+  --bg: #0b0f17;
+  --card: #121a26;
+  --text: #e9eef6;
+  --muted: #aab6c7;
+  --accent: #7dd3fc;
+  --line: rgba(255,255,255,.10);
+}
+[data-theme="light"]{
+  --bg: #f7f8fb;
+  --card: #ffffff;
+  --text: #101827;
+  --muted: #4b5563;
+  --accent: #2563eb;
+  --line: rgba(0,0,0,.10);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+/* selector NAME */
+h1,h2,h3{ line-height:1.15; margin:0 0 .5rem; }
+p{ margin:0 0 1rem; color: var(--text); }
+/* layout  */
+.container{
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+  padding: 16px 0;
+}
+.site-header{
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(10,14,22,.75);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+/* combinator selector */
+.header__grid{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 16px;
+}
+.brand{
+  display:flex;
+  gap: 10px;
+  align-items:center;
+  text-decoration:none;
+  color: var(--text);
+}
+.brand__mark{
+  width: 38px;
+  height: 38px;
+  display:grid;
+  place-items:center;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--accent), transparent);
+  border: 1px solid var(--line);
+  font-weight: 800;
+}
+.brand__name{ font-weight: 700; opacity: .95; }
+.nav__toggle{
+  display:none;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--text);
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+.nav__list{
+  list-style:none;
+  display:flex;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+.nav__link{
+  display:inline-block;
+  padding: 10px 12px;
+  border-radius: 12px;
+  text-decoration:none;
+  color: var(--text);
+  border: 1px solid transparent;
+}
+.nav__link:hover{ border-color: var(--line); }
+.nav__link.is-active{ background: rgba(125, 211, 252, .12); border-color: rgba(125, 211, 252, .25); }
+.hero{
+  display:grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 18px;
+  margin-top: 8px;
+}
+.hero__title{ font-size: clamp(2rem, 2.6vw + 1rem, 3rem); }
+.hero__lead{ color: var(--muted); max-width: 60ch; }
+.eyebrow{ color: var(--muted); letter-spacing:.08em; text-transform:uppercase; font-size:.85rem; }
+.accent{ color: var(--accent); }
+.hero__cta{ display:flex; gap: 10px; flex-wrap: wrap; }
+.card{
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.18);
+}
+.card--wide{ margin-top: 16px; }
+.card__header{ display:flex; justify-content:space-between; align-items:flex-end; gap: 12px; flex-wrap: wrap; }
+.card__title{ font-size: 1.25rem; }
+.muted{ color: var(--muted); }
+.grid-3{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 16px;
+}
+.pill-list{ display:flex; gap: 8px; flex-wrap:wrap; padding:0; margin: 10px 0 0; list-style:none; }
+.pill{ padding: 6px 10px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); }
+.badge[data-level]{
+  display:inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(125, 211, 252, .35);
+  color: var(--accent);
+}
+.toolbox{ display:flex; gap: 10px; flex-wrap: wrap; }
+.field{ display:grid; gap: 6px; min-width: 220px; }
+.field__label{ font-size:.9rem; color: var(--muted); }
+.field__input{
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--text);
+  outline: none;
+}
+.field__input:focus{ border-color: rgba(125, 211, 252, .55); }
+.form{ margin-top: 12px; }
+.form__row{ display:grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.form__actions{ display:flex; gap: 10px; margin-top: 10px; flex-wrap: wrap; }
+.form__status{ margin-top: 10px; color: var(--muted); }
+/* przyciski */
+.btn{
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  padding: 10px 14px;
+  cursor:pointer;
+  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap: 8px;
+  color: var(--text);
+  background: transparent;
+}
+.btn--primary{
+  background: rgba(125, 211, 252, .14);
+  border-color: rgba(125, 211, 252, .35);
+}
+.btn--ghost{ opacity: .95; }
+.btn--small{ padding: 8px 10px; border-radius: 12px; }
+.table-wrap{ overflow:auto; border-radius: 14px; border: 1px solid var(--line); }
+.table{
+  width:100%;
+  border-collapse: collapse;
+  min-width: 640px;
+}
+.table th, .table td{ padding: 12px; border-bottom: 1px solid var(--line); }
+.table th{ text-align:left; color: var(--muted); font-weight: 600; }
+.table tr:hover td{ background: rgba(255,255,255,.03); }
+.slideshow{
+  position:relative;
+  border-radius: 18px;
+  overflow:hidden;
+  border: 1px solid var(--line);
+  height: 320px;
+  /* tło ustawiane dynamicznie z JS */
+  background: var(--card);
+}
+/* rozmyte tło z aktualnego slajdu */
+.slideshow::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image: var(--slide-bg);
+  background-size: cover;
+  background-position: center;
+  filter: blur(18px);
+  transform: scale(1.15);
+  opacity: .9;
+}
+/* właściwe zdjęcie na wierzchu */
+.slideshow__img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit: contain;          /* WAŻNE: portret cały */
+  object-position: center;
+  opacity: 0;
+  transition: opacity .35s ease;
+  z-index: 1;
+}
+.slideshow__img.is-visible{ opacity: 1; }
+/* przyciski nad wszystkim */
+.slideshow__controls{ z-index: 2; }
+.two-col{
+  display:grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 16px;
+}
+/* footer */
+.site-footer{
+  border-top: 1px solid var(--line);
+  margin-top: 18px;
+}
+.footer__grid{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap: 12px;
+}
+.to-top{ color: var(--muted); text-decoration:none; }
+.to-top:hover{ color: var(--text); }
+/* responsywność */
+@media (max-width: 900px){
+  .hero{ grid-template-columns: 1fr; }
+  .grid-3{ grid-template-columns: 1fr; }
+  .two-col{ grid-template-columns: 1fr; }
+  .form__row{ grid-template-columns: 1fr; }
+  .nav__toggle{ display:inline-flex; }
+  .nav__list{
+    display:none;
+    position:absolute;
+    right: 4vw;
+    top: 64px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 10px;
+    flex-direction: column;
+    min-width: 220px;
+  }
+  .nav__list.is-open{ display:flex; }
+}
