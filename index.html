@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CV | Strona główna</title>
+  <link rel="stylesheet" href="css-style.css" />
+  <style>
+    .hero__title { letter-spacing: 0.5px; }
+    .badge[data-level="pro"] { border-style: dashed; }
+  </style>
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container header__grid">
+      <a class="brand" href="index.html" aria-label="Powrót na stronę główną">
+        <span class="brand__mark">CV</span>
+        <span class="brand__name">Patryk Litwin</span>
+      </a>
+      <nav class="nav" aria-label="Nawigacja główna">
+        <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navList">
+          ☰ Menu
+        </button>
+        <ul class="nav__list" id="navList">
+          <li><a class="nav__link is-active" href="index.html">Start</a></li>
+          <li><a class="nav__link" href="about.html">O mnie</a></li>
+          <li><a class="nav__link" href="projects.html">Projekty</a></li>
+          <li><a class="nav__link" href="#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <section class="hero">
+      <div class="hero__content">
+        <p class="eyebrow">CV / Portfolio</p>
+        <h1 class="hero__title">Cześć! Jestem <span class="accent">Patryk Litwin</span> 👋</h1>
+        <p class="hero__lead">
+          Mam 23 lata i akutalnie jestem studentem Uczelni Techniczno Handlowej (UTH) w Warszawie na kierunku
+          <strong>Cyberbezpieczeństwo – informatyka</strong> (1. rok).
+          Po 10 latach wróciłem do Polski z Holandii oraz zacząłem dalszą edukację w kraju. Pomimo niedużego doświadczenia zawodowego w otoczeniu IT wiąże z tym swoją przyszłość i pragne rozwijać się w tym kierunku. Moim celem jest zdobywać coraz to większą wiedze oraz każdego dnia być lepszym i mądrzejszym niż wczoraj.
+        </p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="projects.html">Zobacz projekty</a>
+          <button class="btn btn--ghost" id="toggleThemeBtn" type="button" title="Zmień motyw">
+            Zmień kolorystykę
+          </button>
+        </div>
+        <p style="margin-top:12px; font-size: 0.95rem;">
+          Aktualnie: <span class="badge" data-level="pro">Szukam pierwszej pracy</span>
+        </p>
+      </div>
+      <aside class="hero__media" aria-label="Galeria zdjęć">
+        <div class="slideshow" id="slideshow">
+          <img class="slideshow__img is-visible" src="img-photo1.jpg" alt="Zdjęcie 1 - miejsce na zdjęcie" />
+          <img class="slideshow__img" src="img-photo2.jpg" alt="Zdjęcie 2 - miejsce na zdjęcie" />
+          <img class="slideshow__img" src="img-photo3.png" alt="Zdjęcie 3 - miejsce na zdjęcie" />
+          <div class="slideshow__controls"></div>
+        </div>
+      </aside>
+    </section>
+    <section class="grid-3" aria-label="Szybki przegląd">
+      <article class="card">
+        <h2 class="card__title">Umiejętności / języki programowania</h2>
+        <p>Składanie oraz rozkładanie komputerów jak i laptopów, praca z Windowsem, rozwiązywanie codziennych problemów z elektroniką (Helpdesk). Języki, w których programowałem: C++, HTML, PHP.</p>
+        <ul class="pill-list">
+          <li class="pill">C++</li>
+          <li class="pill">HTML</li>
+          <li class="pill">PHP</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h2 class="card__title">Doświadczenie</h2>
+        <p>Rok praktyk w Polsce jako Administrator IT oraz Programista.</p>
+        <p class="muted">Pragnę rozwijać się dalej w kierunku IT i cyberbezpieczeństwa.</p>
+      </article>
+      <article class="card">
+        <h2 class="card__title">Edukacja</h2>
+        <p><strong>UTH Warszawa</strong> – Cyberbezpieczeństwo-informatyka (1. rok).</p>
+        <p><strong>Techniek College Rotterdam MBO 2(technikum Holenderskie)</strong> - Zarządanie IT (pół roku).</p>
+        <p><strong>Techniek College Rotterdam MBO 3(technikum Holenderskie)</strong> - Administrator IT (pół roku).</p>
+        <p><strong>Techniek College Rotterdam MBO 4(technikum Holenderskie)</strong> - Programista (2 lata).</p>
+      </article>
+    </section>
+    <section class="card card--wide" aria-label="Technologie i poziom">
+      <div class="card__header">
+        <h2 class="card__title">Technologie</h2>
+        <div class="toolbox">
+          <label class="field">
+            <span class="field__label">Szukaj</span>
+            <input id="techSearch" class="field__input" type="search" placeholder="np. HTML, PHP, C++..." />
+          </label>
+          <label class="field">
+            <span class="field__label">Filtr poziomu</span>
+            <select id="levelFilter" class="field__input">
+              <option value="all">Wszystkie</option>
+              <option value="podstawy">Podstawy</option>
+              <option value="sredni">Średni</option>
+              <option value="zaawansowany">Zaawansowany</option>
+            </select>
+          </label>
+          <button class="btn btn--ghost" id="resetFilters" type="button">Reset</button>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table class="table" id="techTable">
+          <thead>
+            <tr>
+              <th scope="col">Technologia</th>
+              <th scope="col">Poziom</th>
+              <th scope="col">Zastosowanie</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-level="sredni">
+              <td>HTML</td>
+              <td>Średni</td>
+              <td>Struktura stron, semantyka</td>
+            </tr>
+            <tr data-level="podstawy">
+              <td>PHP</td>
+              <td>Podstawy</td>
+              <td>Logika po stronie serwera (podstawy)</td>
+            </tr>
+            <tr data-level="podstawy">
+              <td>C++</td>
+              <td>Podstawy</td>
+              <td>Podstawy programowania, algorytmika</td>
+            </tr>
+            <tr data-level="podstawy">
+              <td>JavaScript</td>
+              <td>Podstawy</td>
+              <td>Interakcje na stronie (DOM, eventy)</td>
+            </tr>
+            <tr data-level="podstawy">
+              <td>Bootstrap</td>
+              <td>Podstawy</td>
+              <td>Responsywny grid i komponenty</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section class="card card--wide" id="kontakt" aria-label="Kontakt">
+      <h2 class="card__title">Kontakt</h2>
+      <p>Możesz napisać przez formularz (demo) albo skontaktować się bezpośrednio.</p>
+      <div class="card" style="margin: 12px 0;">
+       <p><strong>Miasto:</strong> Płock</p>
+        <p><strong>Email:</strong> <a href="mailto:patryczek.litwin@gmail.com">patryczek.litwin@gmail.com</a></p>
+        <p><strong>Telefon:</strong> <a href="tel:+48883316827">+48 883 316 827</a></p>
+      </div>
+      <form class="form" id="contactForm" novalidate>
+        <div class="form__row">
+          <label class="field">
+            <span class="field__label">Imię</span>
+            <input class="field__input" id="nameInput" type="text" minlength="2" required placeholder="Jan" />
+          </label>
+          <label class="field">
+            <span class="field__label">Email</span>
+            <input class="field__input" id="emailInput" type="email" required placeholder="jan@email.com" />
+          </label>
+        </div>
+        <label class="field">
+          <span class="field__label">Wiadomość</span>
+          <textarea class="field__input" id="msgInput" rows="4" required placeholder="Cześć, chciałbym..."></textarea>
+        </label>
+        <div class="form__actions">
+          <button class="btn btn--primary" type="submit">Wyślij</button>
+          <button class="btn btn--ghost" type="button" id="fillDemo">Wypełnij przykładem</button>
+        </div>
+        <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <p>© <span id="year"></span> Patryk Litwin</p>
+      <a class="to-top" href="#top">Wróć na górę ↑</a>
+    </div>
+  </footer>
+  <script src="js-app.js"></script>
+</body>
+</html>
