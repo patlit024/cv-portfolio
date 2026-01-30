@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CV | O mnie</title>
+  <link rel="stylesheet" href="css-style.css" />
+  <style>
+    .section-title::after { content: " ✦"; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header__grid">
+      <a class="brand" href="index.html"><span class="brand__mark">CV</span><span class="brand__name">Patryk Litwin</span></a>
+      <nav class="nav" aria-label="Nawigacja">
+        <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navList">☰ Menu</button>
+        <ul class="nav__list" id="navList">
+          <li><a class="nav__link" href="index.html">Start</a></li>
+          <li><a class="nav__link is-active" href="about.html">O mnie</a></li>
+          <li><a class="nav__link" href="projects.html">Projekty</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <section class="two-col">
+      <article class="card">
+        <h1 class="section-title">O mnie</h1>
+        <p>
+          Mam na imię Patryk, mam 23 lata. Urodziłem się w Płocku, w wieku 13 lat przeprowadziłem się do Holandii, mieszkałem tam 10 lat, nauczyłem się biegle mówić w języku Holenderskim/Niderlandzkim. Udało mi się skończyć rownież Holenderskie technikum w kierunku IT, aż po 10 latach nadszedł czas na powrót do ojczyzny. Aktualnie jestem studentem Uczelni Techniczno Handlowej (UTH) w Warszawie
+          na kierunku <strong>Cyberbezpieczeństwo – informatyka</strong> (1. rok).
+          Pomimo niedużego doświadczenia zawodowego w IT, wiążę przyszłość z tym kierunkiem.
+        </p>
+        <h2>Języki</h2>
+        <ul class="list">
+          <li>Polski - C2</li>
+          <li>Niderladzki - C1</li>
+          <li>Angielski - B2</li>
+          <li>Serbski - A2</li>
+          <li>Hiszpański - A1</li>
+        </ul>
+        <h2>Doświadczenie zawodowe</h2>
+        <ol class="list list--ordered">
+          <li>Praktykant jako administrator IT oraz programista junior – wsparcie, konfiguracje, utrzymanie, wykonywanie projektów programistycznych w ramach praktyk</li>
+          <li>Rok jako pomoc montera izolacji przemysłowych Shell Pernis Rotterdam</li>
+          <li>Dwa lata jako monter izolacji przemysłowych Shell Pernis Rotterdam</li>
+
+        </ol>
+      </article>
+      <aside class="card">
+        <h2 class="section-title">Edukacja</h2>
+        <table class="table">
+          <thead>
+            <tr><th>Etap</th><th>Opis</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>UTH (Warszawa)</td>
+              <td>Cyberbezpieczeństwo – informatyka, 1. rok</td>
+            </tr>
+            <tr>
+              <td>MBO 4</td>
+              <td>Programista (2 lata)</td>
+            </tr>
+            <tr>
+              <td>MBO 3</td>
+              <td>Administrator IT (Pół roku)</td>
+            </tr>
+            <tr>
+              <td>MBO 2</td>
+              <td>Zarządznie IT (Pół roku)</td>
+            </tr>
+            <tr>
+              <td>MBO 1</td>
+              <td>Młodszy mechanik samochodowy (Rok)</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 class="section-title" style="margin-top:14px;">Kontakt</h2>
+            <p><strong>Miasto:</strong> Płock</p>
+            <p><strong>Email:</strong> <a href="mailto:patryczek.litwin@gmail.com">patryczek.litwin@gmail.com</a></p>
+            <p><strong>Telefon:</strong> <a href="tel:+48883316827">+48 883 316 827</a></p>
+            
+        <a class="btn btn--ghost" href="index.html">← Wróć na stronę główną</a>
+      </aside>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <p>© <span id="year"></span> Patryk Litwin</p>
+      <a class="to-top" href="index.html#top">Start ↑</a>
+    </div>
+  </footer>
+  <script src="js-app.js"></script>
+</body>
+</html>

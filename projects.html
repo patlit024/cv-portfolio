@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CV | Projekty</title>
+
+  <link rel="stylesheet" href="css-style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header__grid">
+      <a class="brand" href="index.html"><span class="brand__mark">CV</span><span class="brand__name">Patryk Litwin</span></a>
+      <nav class="nav" aria-label="Nawigacja">
+        <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navList">☰ Menu</button>
+        <ul class="nav__list" id="navList">
+          <li><a class="nav__link" href="index.html">Start</a></li>
+          <li><a class="nav__link" href="about.html">O mnie</a></li>
+          <li><a class="nav__link is-active" href="projects.html">Projekty</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container my-4">
+    <div class="row g-3">
+      <div class="col-12 col-lg-8">
+        <div class="card p-3">
+          <h1>Projekty</h1>
+          <div class="d-flex gap-2 flex-wrap align-items-end">
+            <div class="w-100 w-md-auto">
+              <label class="form-label">Filtr tagów</label>
+              <select class="form-select" id="projectFilter">
+                <option value="all">Wszystkie</option>
+                <option value="web">Web</option>
+                <option value="ui">UI</option>
+                <option value="js">JavaScript</option>
+                <option value="admin">Administrator</option>
+              </select>
+            </div>
+            <button class="btn btn-outline-secondary" id="shuffleBtn" type="button">
+              Wymieszaj kolejność (JS)
+            </button>
+          </div>
+          <ul class="list-group mt-3" id="projectList">
+            <li class="list-group-item" data-tags="web ui">
+              <strong>Strona CV</strong> <span class="badge text-bg-primary">Web</span>
+              <div class="text-secondary">Semantyczny HTML + CSS + JS (slideshow, filtry, formularz).</div>
+            </li>
+            <li class="list-group-item" data-tags="admin">
+              <strong>Praktyki: Administrator IT</strong> <span class="badge text-bg-warning">Administrator</span>
+              <div class="text-secondary">Wsparcie IT, konfiguracja, utrzymanie środowiska (opis skrótowy).</div>
+            </li>
+            <li class="list-group-item" data-tags="web js">
+              <strong>Mini interakcje JS</strong> <span class="badge text-bg-success">JS</span>
+              <div class="text-secondary">Obsługa DOM, zdarzeń i dynamicznych zmian na stronie.</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-12 col-lg-4">
+        <div class="card p-3">
+          <h2>Podsumowanie</h2>
+          <table class="table table-sm">
+            <thead>
+              <tr><th>Rok</th><th>Pozycja</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>2026</td><td>Strona CV</td></tr>
+              <tr><td>2023</td><td>Praktyki Administrator IT</td></tr>
+              <tr><td>2023</td><td>Praktyki Programista</td></tr>
+            </tbody>
+          </table>
+          <a class="btn btn-outline-primary w-100" href="index.html">← Wróć na stronę główną</a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <p>© <span id="year"></span> Patryk Litwin</p>
+      <a class="to-top" href="index.html#top">Start ↑</a>
+    </div>
+  </footer>
+  <script src="js-app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
